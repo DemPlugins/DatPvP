@@ -1,0 +1,11 @@
+name: DatPvP
+main: in.tech57gam.datpvp.DatPvP
+version: 0.1
+author: Bitcoin, adamjones57
+
+commands:
+    enlist:
+        description: PvP! Lets do it.
+        usage: /enlist
+        permission:
+        permission-message:
