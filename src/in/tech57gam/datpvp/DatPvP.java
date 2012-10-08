@@ -46,3 +46,5 @@ public class PvPMain extends JavaPlugin
 	}
 
 }
+/*
+ * COCK
