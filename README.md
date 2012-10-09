@@ -29,6 +29,10 @@ Upcoming features
 -------
 - Rank players based on a points system
 - Allow points to be configurable
+- **/pvp stats** - Tells player what level they are at, and how many more points they need to level up
+- **/pvp stats <player>** - Tells player what level a player is at, and how many more points that player needs to level up
+- **dat.pvp.stats** - Permisison node for /pvp stats
+- **dat.pvp.stats.others** - Permission node for /pvp stats <player>
 
 Configuration
 -------------
