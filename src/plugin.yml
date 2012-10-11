@@ -5,7 +5,7 @@ author: Bitcoin, adamjones57
 
 commands:
     enlist:
-        description: PvP! Lets do it.
+        description: Enlist in pvp!
         usage: /enlist
-        permission:
-        permission-message:
+        permission: dat.pvp.enlist
+        permission-message: You do not have permission!
