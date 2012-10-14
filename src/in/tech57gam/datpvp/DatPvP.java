@@ -19,12 +19,12 @@ public class DatPvP extends JavaPlugin
 	
 	public void onEnable()
 	{
-		getLogger().info("DatPvP has been enabled.");
+		// getLogger().info("DatPvP has been enabled.");
 	}
 	
 	public void onDisable()
 	{
-		getLogger().info("DatPvP has been disabled!");
+		// getLogger().info("DatPvP has been disabled!");
 	}
 	
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args)
@@ -36,14 +36,20 @@ public class DatPvP extends JavaPlugin
 		{ // Begin Enlist Block.
 			if(player.hasPermission("dat.pvp.activated"))
 			{
-				player.sendMessage(ChatColor.DARK_RED + "You're already enlisted!");
+				player.sendMessage(ChatColor.DARK_RED + "[DatPvP] " + ChatColor.RED + "You are already enlisted!");
 				return true;
-			} else {
-			player.sendMessage(player.getDisplayName() + ChatColor.AQUA +  
-					" has enlisted in PvP and is now the rank \"" + 
-					ChatColor.GRAY + "[Private]" + ChatColor.AQUA + "\"!");
-			Bukkit.getServer().dispatchCommand((Bukkit.getConsoleSender()), "manuadd " + player.getName() + " Private test_pvp_world");
-			return true;
+			}
+			if(player.hasPermission("dat.pvp.deactivated"))
+			{
+				player.sendMessage(ChatColor.GOLD + "[DatPvP] " + ChatColor.YELLOW + player.getDisplayName() +  
+						" has enlisted in PvP and is now the rank " + ChatColor.GOLD + "Private" + ChatColor.YELLOW + "!");
+				Bukkit.getServer().dispatchCommand((Bukkit.getConsoleSender()), "manuadd " + player.getName() + " Private test_pvp_world");
+				return true;
+			}
+			else
+			{
+				player.sendMessage(ChatColor.DARK_RED + "[DatPvP] " + ChatColor.RED + "You do not have permision.");
+				return true;
 			}
 	
 		}
