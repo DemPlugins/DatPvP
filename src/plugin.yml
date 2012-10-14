@@ -2,10 +2,24 @@ name: DatPvP
 main: in.tech57gam.datpvp.DatPvP
 version: 0.1
 author: Bitcoin, adamjones57
-
+website: http://dev.bukkit.org/server-mods/datpvp/
+description: >
+             PvP Ranking System for Anarchy servers.
 commands:
     enlist:
-        description: Enlist in pvp!
-        usage: /enlist
-        permission: dat.pvp.enlist
-        permission-message: You do not have permission!
+      description: Enlist into PvP battle.
+      usage: /enlist
+      aliases: [enlist,el]
+permissions:
+    dat.pvp.user:
+      description: Gives permission required to use DatPvP.
+      children:
+        dat.pvp.activated: true
+    dat.pvp.default:
+      description: Gives permission to enlist in PvP basically.
+      children:
+        dat.pvp.deactivated: true
+    dat.pvp.activated:
+      description: Gives permission to engage in PvP combat.
+    dat.pvp.deactivated:
+      description: Deny's permission to engage in PvP combat, also allows ranking to PvP rank.
