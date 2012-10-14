@@ -6,10 +6,9 @@ website: http://dev.bukkit.org/server-mods/datpvp/
 description: >
              PvP Ranking System for Anarchy servers.
 commands:
-    enlist:
-      description: Enlist into PvP battle.
-      usage: /enlist
-      aliases: [enlist,el]
+    pvp:
+      description: DatPvP commands.
+      usage: /pvp <sub-command>
 permissions:
     dat.pvp.user:
       description: Gives permission required to use DatPvP.
