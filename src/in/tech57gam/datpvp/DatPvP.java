@@ -51,7 +51,7 @@ public class DatPvP extends JavaPlugin
 					return true;
 				}
 			}
-			return false;
 		}
 	}
+	return false;
 }
