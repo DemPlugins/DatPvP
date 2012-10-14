@@ -47,7 +47,7 @@ public class DatPvP extends JavaPlugin
 				}
 				else
 				{
-					player.sendMessage(ChatColor.DARK_RED + "[DatPvP] " + ChatColor.RED + "You do not have permision.");
+					player.sendMessage(ChatColor.DARK_RED + "[DatPvP] " + ChatColor.RED + "You do not have permission.");
 					return true;
 				}
 			}
