@@ -31,7 +31,7 @@ public class DatPvP extends JavaPlugin
 		
 		Player player = (Player) sender;
 		if(cmd.getName().equalsIgnoreCase("pvp"))
-			if(cmd.getName().equalsIgnoreCase("enlist"))
+			if(args[0].equalsIgnoreCase("enlist"))
 			{ // Begin Enlist Block.
 				if(player.hasPermission("dat.pvp.activated"))
 				{
