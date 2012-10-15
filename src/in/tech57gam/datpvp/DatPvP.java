@@ -12,15 +12,21 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
+import java.io.IOException;
 
 public class DatPvP extends JavaPlugin
 {
 	
-	public void onEnable()
-	{
-		// getLogger().info("DatPvP has been enabled.");
+	public void onEnable() {
+		try {
+			Metrics metrics = new Metrics(this);
+			metrics.start();
+		}
+		catch (IOException e) {
+			getLogger().info("Error submitting Metrics!");
+		}
 	}
-	
+
 	public void onDisable()
 	{
 		// getLogger().info("DatPvP has been disabled!");
