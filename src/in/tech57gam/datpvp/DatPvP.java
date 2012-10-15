@@ -40,14 +40,14 @@ public class DatPvP extends JavaPlugin
 				}
 				if(player.hasPermission("dat.pvp.deactivated"))
 				{
-					player.sendMessage(ChatColor.GOLD + "[DatPvP] " + ChatColor.YELLOW + player.getDisplayName() +  
+					player.sendMessage(ChatColor.GOLD + "[DatPvP] " + ChatColor.YELLOW + player.getName() +  
 							" has enlisted in PvP and is now the rank " + ChatColor.GOLD + "Private" + ChatColor.YELLOW + "!");
 					Bukkit.getServer().dispatchCommand((Bukkit.getConsoleSender()), "manuadd " + player.getName() + " Private test_pvp_world");
 					return true;
 				}
 				else
 				{
-					player.sendMessage(ChatColor.DARK_RED + "[DatPvP] " + ChatColor.RED + "You do not have permision.");
+					player.sendMessage(ChatColor.DARK_RED + "[DatPvP] " + ChatColor.RED + "You do not have permission.");
 					return true;
 				}
 			}
